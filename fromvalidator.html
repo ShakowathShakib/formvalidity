@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From validator</title>
+    <link rel="stylesheet" href="fromvalidator.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form validator</h1>
+        <h3 id="message"></h3>
+        <from id="from" novalidate>
+
+            <div class="from-group">
+                <label for="name">Full name</label>
+                <input id="name" type="text" name="name" placeholder="full name" required minlength="3"
+                    maxlength="100" />
+            </div>
+
+            <div class="from-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" 
+                name="email"
+                 placeholder="email@gmail.com" 
+                 required />
+            </div>
+
+            <div class="from-group">
+                <label for="phone">Phone number</label>
+                <input id="phone" type="tel" name="phone" 
+                placeholder="41600-000000"
+                pattern="^[0-9]{5}-[0-9]{6}$"
+                required />
+            </div>
+
+            <div class="from-group">
+                <label for="website">Website URL</label>
+                <input id="website" type="url" name="website"
+                 placeholder="https://www.google.ca/" 
+                 required />
+            </div>
+
+            <div class="from-group">
+                <label for="password1">password</label>
+                <input id="password1" type="password" name="password"
+                 placeholder="create password (min 8 chracters)"
+                    pattern="^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,20})$"
+                    title="please add at least 1 uppercase chracters 1 
+                    lowercse chracters 1 number 1 speacial chracters"
+                    required />
+            </div>
+
+            <div class="from-group">
+                <label for="password2"> corfirm password</label>
+                <input id="password2" type="password" 
+                name="password" placeholder="confirm passwprd" 
+                required />
+            </div>
+
+            <button type="submit"> Register</button>
+        </from>
+
+    </div>
+    <script src="fromvalidator.js"></script>
+</body>
+
+</html>
